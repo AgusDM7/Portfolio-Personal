@@ -1,0 +1,29 @@
+---
+const currentYear = new Date().getFullYear()
+const emailLink = "mailto:delmonteagustin1@gmail.com";
+---
+
+<footer
+  class="opacity-80 m-4 min-[375px]:pl-4 md:pl-0 mt-28 w-full mx-auto container lg:max-w-4xl md:max-w-2xl flex justify-center"
+>
+  <div
+    class="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4"
+  >
+    <span class="text-sm sm:text-center text-zinc-200/90"
+      >&copy; {currentYear}
+      <a>Agustín Del Monte</a>. derechos reservados
+    </span>
+    <ul
+      class="flex flex-wrap items-center mt-3 text-sm font-medium text-white/90 sm:mt-0"
+    >
+      <li>
+        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
+      </li>
+      <li>
+        <a id="contacto" href={emailLink} rel="noopener noreferrer" target="_blank" class="hover:underline" role="link"
+          >Contacto</a
+        >
+      </li>
+    </ul>
+  </div>
+</footer>

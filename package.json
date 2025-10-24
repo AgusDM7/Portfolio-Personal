@@ -1,0 +1,21 @@
+{
+  "name": "porfolio-agustindelmonte",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/onest": "^5.2.11",
+    "@tailwindcss/vite": "^4.1.15",
+    "astro": "^5.14.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}

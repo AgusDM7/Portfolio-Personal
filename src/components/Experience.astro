@@ -1,0 +1,29 @@
+---
+import ExpercienceItem from "./ExpercienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+        title: "Diseño y desarrollo de sitios web freelance",
+        description:
+            "Diseño web de tiendas online modernas, con opciones simples, personalizadas o autogestionables según necesidades de los clientes.",
+        link: "#",
+    },
+    {
+        date: "Marzo 2025",
+        title: "Prácticas Académicas UTN Facultad Regional Mendoza",
+        description:
+            "Colaboración en la mejora de contenidos educativos de forma inmovadora y con acompañamiento y orientación academica de estudiantes.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-2">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExpercienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>

@@ -1,0 +1,59 @@
+---
+import SectionContainer from './SectionContainer.astro';
+import WhatsappIcon from './icons/WhatsappIcon.astro';
+import EmailIcon from './icons/EmailIcon.astro';
+import LinkedInIcon from './icons/LinkedIn.astro';
+
+// Variables de contacto
+const whatsappNumber = "5492615524127"; 
+const whatsappMessage = "Vengo de ver tu porfolio web y quería realizarte una consulta";
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+const emailLink = "mailto:delmonteagustin1@gmail.com";
+const linkedinLink = "https://www.linkedin.com/in/agustin-del-monte-741776244/";
+---
+
+
+  <h3 class="text-white text-2xl md:text-3xl lg:text-2xl pb-6 lg:pb-10">
+    No dudes en contactarme si necesitas más información o tienes alguna consulta.
+  </h3>
+
+  <!-- Botones de contacto -->
+  <nav class="flex gap-4 mt-8 flex-wrap">
+    
+    <a
+      href={whatsappLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex gap-2 px-2 py-1 sm:px-3 sm:py-2  bg-green-500 text-white rounded-lg shadow hover:bg-green-600 transition"
+      role="link"
+    >
+      <WhatsappIcon class="w-6 h-6" />
+      WhatsApp
+    </a>
+
+    
+    <a
+      href={emailLink}
+      class="inline-flex gap-2 px-2 py-1 sm:px-3 sm:py-2  bg-blue-500 text-white rounded-lg shadow hover:bg-blue-600 transition"
+      target="_blank"
+      rel="noopener noreferrer"
+      role="link"
+    >
+      <EmailIcon class="w-6 h-6" />
+      Email
+    </a>
+
+    
+    <a
+      href={linkedinLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex gap-2 px-2 py-1 sm:px-3 sm:py-2  bg-blue-700 text-white rounded-lg shadow hover:bg-blue-800 transition"
+      role="link"
+    >
+      <LinkedInIcon class="w-6 h-6" />
+      LinkedIn
+    </a>
+  </nav>
+

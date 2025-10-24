@@ -1,0 +1,139 @@
+<header 
+    class="fixed top-0 left-0 right-0 z-50 py-4 w-full backdrop-blur-md bg-gray-900/70 border-b border-white/5"
+>
+    <div class="flex justify-between items-center w-full xl:w-[1120px] mx-auto px-4">
+        
+        <div class="md:hidden">
+            <span class="text-lg text-white text-pretty">Mi Porfolio</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex flex-row gap-x-1 md:gap-x-2 mx-auto">
+            <a 
+                href="#top" 
+                class="relative px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white group"
+            >
+                Inicio
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-blue-400 transition-all duration-300 group-hover:w-3/4"></span>
+            </a>
+
+            <a 
+                href="#sobre-mi" 
+                class="relative px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white group"
+            >
+                Sobre mí
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-blue-400 transition-all duration-300 group-hover:w-3/4"></span>
+            </a>
+            
+           
+            <a 
+                href="#proyectos" 
+                class="relative px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white group"
+            >
+                Proyectos
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-blue-400 transition-all duration-300 group-hover:w-3/4"></span>
+            </a>
+            
+            
+
+             <a 
+                href="#experiencia" 
+                class="relative px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white group"
+            >
+                Experiencia
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-blue-400 transition-all duration-300 group-hover:w-3/4"></span>
+            </a>
+            
+            
+            <a 
+                href="#contacto" 
+                class="relative px-4 py-2 text-sm font-medium text-gray-400 transition-colors duration-300 hover:text-white group"
+            >
+                Contacto
+                <span class="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-0 bg-blue-400 transition-all duration-300 group-hover:w-3/4"></span>
+            </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button 
+            id="mobile-menu-button"
+            class="md:hidden p-2 text-gray-400 hover:text-white transition-colors"
+            aria-label="Toggle menu"
+        >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path class="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                <path class="close-icon hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav 
+        id="mobile-menu"
+        class="md:hidden hidden flex-col gap-2 px-4 pt-2"
+    >
+        <a 
+            href="#top" 
+            class="mobile-link px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+        >
+            Inicio
+        </a>
+        
+        <a 
+            href="#sobre-mi" 
+            class="mobile-link px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+        >
+            Sobre mí
+        </a>
+        
+        <a 
+            href="#proyectos" 
+            class="mobile-link px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+        >
+            Proyectos
+        </a>
+        
+
+        <a 
+            href="#experiencia" 
+            class="mobile-link px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+        >
+            Experiencia
+        </a>
+        
+        <a 
+            href="#contacto" 
+            class="mobile-link px-4 py-3 text-sm font-medium text-gray-400 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+        >
+            Contacto
+        </a>
+    </nav>
+</header>
+
+<!-- Espaciador para compensar el header fixed -->
+<div class="h-16"></div>
+
+<script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuButton?.querySelector('.menu-icon');
+    const closeIcon = menuButton?.querySelector('.close-icon');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuButton?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+        mobileMenu?.classList.toggle('flex');
+        menuIcon?.classList.toggle('hidden');
+        closeIcon?.classList.toggle('hidden');
+    });
+
+    // Cerrar menú al hacer click en un link
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu?.classList.add('hidden');
+            mobileMenu?.classList.remove('flex');
+            menuIcon?.classList.remove('hidden');
+            closeIcon?.classList.add('hidden');
+        });
+    });
+</script>

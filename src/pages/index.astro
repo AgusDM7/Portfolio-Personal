@@ -1,0 +1,107 @@
+---
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Layout from "../layouts/Layout.astro";
+import Briefcase from "../components/icons/briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Project.astro";
+import AboutMe from "../components/AboutMe.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import Contacto from "../components/Contacto.astro";
+import ContactoIcon from "../components/icons/ContactoIcon.astro";
+---
+
+<Layout
+	title="Portfolio Agustin Del Monte desarrollador Full Stack"
+	description="Bienvenido/a al portfolio de Agustín, programador Full Stack con experiencia en desarrollo web, bases de datos y diseño de interfaces. Descubrí mis proyectos, formación y datos de contacto."
+>
+	<main class="px-5">
+		<SectionContainer class="pt-10 sm:pt-32 md:pt-40 pb-36 sm:pb-40 md:pb-30">
+			
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 "
+			>
+				Hey, soy Agustín <a
+					href="https://www.linkedin.com/in/agustín-del-monte-741776244/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge> Disponible </Badge>
+				</a>
+			</h1>
+
+			<h2 class="text-2xl opacity-90 leading-tight ">
+				Programador Full Stack graduado en Argentina, enfocado en el
+				<span class="text-blue-200">desarrollo web y front-end.</span
+				><br />
+				<span class="text-lg opacity-90"
+					>Apasionado por el aprendizaje continuo, la exploración de
+					nuevas perspectivas y el desarrollo de soluciones web
+					combinando lógica, diseño y creatividad.</span
+				>
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill
+					href="https://www.linkedin.com/in/agustín-del-monte-741776244/"
+				>
+					<LinkedInIcon class="size-4 md:w-6 h-6" />
+					LinkedIn
+				</SocialPill>
+
+				<SocialPill href="https://github.com/AgusDM7">
+					<GitHubIcon class="size-4 md:w-6 h-6" />
+					Github
+				</SocialPill>
+
+				<SocialPill href="mailto: delmonteagustin1@gmail.com">
+					<EmailIcon class="size-4 md:w-6 h-6" />
+					delmonteagustin1@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="sobre-mi" class="mb-40">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ProfileCheck class="zise-6" />
+				Sobre mí
+			</h2>
+			<AboutMe />
+		</SectionContainer>
+
+
+		<SectionContainer id="proyectos" class="mb-40">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="zise-6" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+
+
+
+		<SectionContainer id="experiencia" class="mb-40">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="zise-6" />
+				Experiencia Laboral
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ContactoIcon class="zise-6" />
+				Contacto
+			</h2>
+			<Contacto />
+
+
+	</main>
+</Layout>

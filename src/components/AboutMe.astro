@@ -1,0 +1,63 @@
+---
+const personalImageAlt = "Agustin Del Monte";
+---
+
+<article
+    class="relative flex flex-col items-center justify-center gap-8 md:gap-12 md:flex-row group opacity-0 translate-y-6 animate-fade-in"
+>
+    
+    <div class="relative z-10 space-y-6 text-gray-300 [&>p>strong]:font-semibold [&>p>strong]:font-mono text-pretty order-2 md:order-">
+        
+        
+        <p class="text-base leading-relaxed">
+            Mi nombre es <strong class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Agustín Del Monte</strong>.  
+            
+        </p>
+
+        <p> Soy<strong class="text-blue-400"> Técnico Universitario en Programación</strong> graduado de la Universidad Tecnológica Nacional en Mendoza, Argentina.  
+            Desde muy pequeño me ha apasionado la tecnología y esto me ha impulsado a adentrarme en el fascinante mundo de la Informática y el desarrollo.
+        </p>
+
+        
+        <p class="text-base leading-relaxed border-l-2 border-blue-500/30 pl-4">
+            Como profesional me destaco por mi <strong class="text-blue-400">capacidad de aprendizaje rápido, trabajo en equipo y adaptabilidad</strong>.  
+            Disfruto enfrentandome a desafíos técnicos y encontrando soluciones creativas.
+        </p>
+
+        
+    </div>
+
+    
+    <img
+        width="200"
+        height="200"
+        src="/public/foto.jpg"
+        alt={personalImageAlt}
+        class="order-1 md:order-2 mr-44 object-cover w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 p-1 rotate-0 md:rotate-3 rounded-2xl opacity-0 translate-y-6 animate-fade-in-delay"
+        style="object-position: 50% 50%;"
+    />
+</article>
+
+<style>
+/* Animación simple usando keyframes */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(1.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tailwind-style classes para animación */
+.animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fade-in 0.8s ease-out 0.3s forwards;
+}
+</style>
+
