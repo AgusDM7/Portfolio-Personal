@@ -6,7 +6,7 @@ import LinkedInIcon from './icons/LinkedIn.astro';
 
 // Variables de contacto
 const whatsappNumber = "5492615524127"; 
-const whatsappMessage = "Vengo de ver tu porfolio web y quería realizarte una consulta";
+const whatsappMessage = "Hola! Acabo de ver tu portfolio y me gustaría hablar sobre una oportunidad de colaboración. ¿Tienes tiempo para una charla?";
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
 const emailLink = "mailto:delmonteagustin1@gmail.com";
@@ -14,12 +14,12 @@ const linkedinLink = "https://www.linkedin.com/in/agustin-del-monte-741776244/";
 ---
 
 
-  <h3 class="text-white text-2xl md:text-3xl lg:text-2xl pb-6 lg:pb-10">
+  <h3 class="text-white text-base md:text-3xl lg:text-xl pb-6 lg:pb-10">
     No dudes en contactarme si necesitas más información o tienes alguna consulta.
   </h3>
 
   <!-- Botones de contacto -->
-  <nav class="flex gap-4 mt-8 flex-wrap">
+  <nav class="flex gap-4 mt-8 lg:mt-1 flex-wrap">
     
     <a
       href={whatsappLink}

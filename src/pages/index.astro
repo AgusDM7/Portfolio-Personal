@@ -14,6 +14,14 @@ import AboutMe from "../components/AboutMe.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import Contacto from "../components/Contacto.astro";
 import ContactoIcon from "../components/icons/ContactoIcon.astro";
+import JavaScript from "../components/icons/JavaScript.astro";
+import TypeScript from "../components/icons/TypeScript.astro";
+import React from "../components/icons/React.astro";
+import Java from "../components/icons/Java.astro";
+import Mysql from "../components/icons/Mysql.astro";
+import Tailwind from "../components/icons/Tailwind.astro";
+import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
+
 ---
 
 <Layout
@@ -73,6 +81,47 @@ import ContactoIcon from "../components/icons/ContactoIcon.astro";
 				Sobre mí
 			</h2>
 			<AboutMe />
+
+				<div class="mt-16">
+				<h3 class="text-2xl font-semibold text-pretty mb-4 text-white ml-2">Mis Habilidades</h3>
+				<div class="grid grid-cols-4 md:flex gap-2 text-sm mt-6">
+					<SocialPill>
+						<React class="hidden md:inline size-4 md:w-6 h-6 grayscale brightness-200" />
+						React
+					</SocialPill>
+					
+					<SocialPill>
+						<JavaScript class="hidden md:inline size-4 md:w-6 h-6" />
+						JavaScript
+					</SocialPill>
+					
+					<SocialPill>
+						<TypeScript class="hidden md:inline size-3 md:w-4 h-4" />
+						TypeScript
+					</SocialPill>
+					
+					<SocialPill>
+						<Tailwind class="hidden md:inline size-3 md:w-4 h-4 grayscale brightness-200" />
+						Tailwind
+					</SocialPill>
+					
+					<SocialPill>
+						<Java class="hidden md:inline size-4 md:w-6 h-6" />
+						Java  
+					</SocialPill>
+					
+					<SocialPill>
+						<SpringBootIcon class=" hidden md:inline size-3 md:w-4 h-4" />
+						SpringBoot
+					</SocialPill>
+					
+					<SocialPill>
+						<Mysql class="hidden md:inline size-4 md:w-6 h-6" />
+						MySQL
+					</SocialPill>
+				</div>
+			</div>
+			
 		</SectionContainer>
 
 
