@@ -32,9 +32,9 @@ import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
 		<SectionContainer class="pt-10 sm:pt-32 md:pt-40 pb-36 sm:pb-40 md:pb-30">
 			
 			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 "
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-x-4 pb-6 lg:pb-10 opacity-0 animate-slide-down"
 			>
-				Hey, soy Agustín <a
+				Hey, soy <span class="text-gradient animate-gradient inline-block pb-1">Agustín</span> <a
 					href="https://www.linkedin.com/in/agustín-del-monte-741776244/"
 					target="_blank"
 					rel="noopener"
@@ -44,10 +44,9 @@ import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
 				</a>
 			</h1>
 
-			<h2 class="text-2xl opacity-90 leading-tight ">
-				Programador Full Stack graduado en Argentina, enfocado en el
-				<span class="text-blue-200">desarrollo web y front-end.</span
-				><br />
+			<h2 class="text-xl md:text-2xl leading-relaxed opacity-0 animate-slide-up">
+				Programador Full Stack <br />
+
 				<span class="text-lg opacity-90"
 					>Apasionado por el aprendizaje continuo, la exploración de
 					nuevas perspectivas y el desarrollo de soluciones web
@@ -55,7 +54,7 @@ import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
 				>
 			</h2>
 
-			<nav class="flex gap-4 mt-8 flex-wrap">
+			<nav class="flex gap-4 mt-8 flex-wrap opacity-0 animate-fade-in-up">
 				<SocialPill
 					href="https://www.linkedin.com/in/agustín-del-monte-741776244/"
 				>
@@ -153,4 +152,96 @@ import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
 
 
 	</main>
-</Layout>
+
+	<style>
+	/* Animaciones de entrada */
+	@keyframes slide-down {
+		0% {
+			opacity: 0;
+			transform: translateY(-30px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes slide-up {
+		0% {
+			opacity: 0;
+			transform: translateY(30px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fade-in-up {
+		0% {
+			opacity: 0;
+			transform: translateY(20px);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes gradient-shift {
+		0%, 100% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+	}
+
+	/* Clases de animación */
+	.animate-slide-down {
+		animation: slide-down 0.8s ease-out forwards;
+	}
+
+	.animate-slide-up {
+		animation: slide-up 0.8s ease-out 0.3s forwards;
+	}
+
+	.animate-fade-in-up {
+		animation: fade-in-up 0.8s ease-out 0.5s forwards;
+	}
+
+	/* Gradiente animado en el nombre */
+	.text-gradient {
+		background: linear-gradient(
+			90deg,
+			#86a9e2 0%,
+			#9bc0ee 25%,
+			#45c5e6 50%,
+			#5386c5 75%,
+			#09419b 100%
+		);
+		background-size: 200% auto;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		line-height: 1.2;
+		padding-bottom: 0.1em;
+		display: inline-block;
+	}
+
+	.animate-gradient {
+		animation: gradient-shift 3s ease infinite;
+	}
+
+	/* Suavizar transiciones en mobile */
+	@media (prefers-reduced-motion: reduce) {
+		.animate-slide-down,
+		.animate-slide-up,
+		.animate-fade-in-up,
+		.animate-gradient {
+			animation: none;
+			opacity: 1;
+			transform: none;
+		}
+	}
+</style>

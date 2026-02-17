@@ -1,7 +1,16 @@
+---
+---
 
-<span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 
-rounded-full dark:bg-blue-900 dark:text-blue-300 bg-opacity-90"
-><slot />
-</span>
-
-
+<div class="flex items-center">
+	<span class="relative inline-flex rounded-full border border-blue-400/30 hover:border-blue-400/50 hover:scale-105 transition-all duration-300">
+		<!-- Contenido del badge con efecto cristal -->
+		<div class="inline-flex items-center justify-center gap-2 px-4 py-1.5 text-xs font-medium text-blue-100 bg-blue-500/10 rounded-full cursor-pointer backdrop-blur-md whitespace-nowrap shadow-lg">
+			<!-- Punto pulsante azul -->
+			<span class="relative flex h-2 w-2">
+				<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+				<span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+			</span>
+			<slot />
+		</div>
+	</span>
+</div>

@@ -3,75 +3,65 @@ const personalImageAlt = "Agustin Del Monte";
 ---
 
 <article
-    class="relative flex flex-col items-center justify-center gap-8 md:gap-12 md:flex-row group opacity-0 translate-y-6 animate-fade-in"
+	class="relative flex flex-col items-center justify-center gap-8 md:gap-12 md:flex-row group"
 >
-    <div
-        class="relative z-10 space-y-6 text-gray-300 [&>p>strong]:font-semibold [&>p>strong]:font-mono text-pretty order-2 md:order-"
-    >
-        <p class="text-base leading-relaxed">
-            Mi nombre es <strong
-                class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"
-                >Agustín Del Monte</strong
-            >.
-        </p>
+	<!-- Efecto de brillo de fondo -->
+	<div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-3xl blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-        <p>
-            Soy<strong class="text-blue-400">
-                Técnico Universitario en Programación</strong
-            > graduado de la Universidad Tecnológica Nacional en Mendoza, Argentina.
-            Desde muy pequeño me ha apasionado la tecnología y esto me ha impulsado
-            a adentrarme en el fascinante mundo de la Informática y el desarrollo.
-        </p>
+	<div
+		class="relative z-10 space-y-6 text-gray-300 [&>p>strong]:font-semibold [&>p>strong]:font-mono text-pretty order-2 md:order-1 opacity-0 animate-fade-in"
+	>
+		<p class="text-base leading-relaxed">
+			Mi nombre es <strong
+				class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300"
+				>Agustín Del Monte</strong
+			>.
+		</p>
 
-        <p class="text-base leading-relaxed border-l-2 border-blue-500/30 pl-4">
-            Como profesional me destaco por mi <strong class="text-blue-400"
-                >capacidad de aprendizaje rápido, trabajo en equipo y
-                adaptabilidad</strong
-            >. Disfruto enfrentandome a desafíos técnicos y encontrando
-            soluciones creativas.
-        </p>
-    </div>
+		<p class="text-base leading-relaxed">
+			Soy <strong class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-300">
+				Técnico Universitario en Programación</strong
+			>  con perfil Full Stack con experiencia en desarrollo de aplicaciones web, manejo de bases de datos, consumo de APIs, diseño web, desarrollo backend, integración de servicios y  tecnologias modernas.  Orientado a buenas prácticas, trabajo en equipo y aprendizaje continuo.
 
-    <img
-    src="/Projects/foto.jpeg"
-    alt={personalImageAlt}
+		</p>
 
-    class="order-1 md:order-2
-           object-cover
+		<p class="text-base leading-relaxed border-l-4 border-blue-500/40 pl-4 py-2 bg-blue-500/5 rounded-r-lg">
+			graduado de la Universidad Tecnológica Nacional en Mendoza, Argentina.
+		</p>
+	</div>
 
-           w-48 h-48
-           sm:w-56 sm:h-56  
-           md:w-72 md:h-72
-
-           p-1 rounded-2xl
-           opacity-0 translate-y-6 animate-fade-in-delay
-           
-           ml-0 mr-auto md:mx-0 md:mr-20"
-           
-    style="object-position: 65% 20%;"
-/>
-
+	<div class="order-1 md:order-2 relative opacity-0 animate-fade-in-delay ml-0 mr-auto md:mx-0 md:mr-20">
+		<!-- Efecto de anillo decorativo -->
+		<div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl opacity-20 blur-xl scale-105 group-hover:scale-110 transition-transform duration-500"></div>
+		
+		<div class="relative z-10 w-40 h-52 sm:w-48 sm:h-64 md:w-52 md:h-60 overflow-hidden rounded-2xl border-2 border-white/10 shadow-2xl group-hover:scale-105 group-hover:border-blue-400/30 transition-all duration-500">
+			<img
+				src="/Projects/foto.png"
+				alt={personalImageAlt}
+				class="w-full h-full object-cover"
+				style="object-position: center center;"
+			/>
+		</div>
+	</div>
 </article>
 
 <style>
-    /* Animación simple usando keyframes */
-    @keyframes fade-in {
-        0% {
-            opacity: 0;
-            transform: translateY(1.5rem);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+	@keyframes fade-in {
+		0% {
+			opacity: 0;
+			transform: translateY(1.5rem);
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
-    /* Tailwind-style classes para animación */
-    .animate-fade-in {
-        animation: fade-in 0.8s ease-out forwards;
-    }
+	.animate-fade-in {
+		animation: fade-in 0.8s ease-out forwards;
+	}
 
-    .animate-fade-in-delay {
-        animation: fade-in 0.8s ease-out 0.3s forwards;
-    }
+	.animate-fade-in-delay {
+		animation: fade-in 0.8s ease-out 0.3s forwards;
+	}
 </style>
