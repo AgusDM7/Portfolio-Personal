@@ -21,6 +21,7 @@ import Java from "../components/icons/Java.astro";
 import Mysql from "../components/icons/Mysql.astro";
 import Tailwind from "../components/icons/Tailwind.astro";
 import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
+import Python from "../components/icons/Python.astro";
 
 ---
 
@@ -29,7 +30,7 @@ import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
 	description="Bienvenido/a al portfolio de Agustín, programador Full Stack con experiencia en desarrollo web, bases de datos y diseño de interfaces. Descubrí mis proyectos, formación y datos de contacto."
 >
 	<main class="px-5">
-		<SectionContainer class="pt-10 sm:pt-32 md:pt-40 pb-36 sm:pb-40 md:pb-30">
+		<SectionContainer class="pt-6 sm:pt-16 md:pt-24 pb-36 sm:pb-40 md:pb-30">
 			
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-x-4 pb-6 lg:pb-10 opacity-0 animate-slide-down"
@@ -82,42 +83,46 @@ import SpringBootIcon from "../components/icons/SpringBootIcon.astro";
 			<AboutMe />
 
 				<div class="mt-16">
-				<h3 class="text-2xl font-semibold text-pretty mb-4 text-white ml-2">Mis Habilidades</h3>
-				<div class="grid grid-cols-4 md:flex gap-2 text-sm mt-6">
-					<SocialPill>
-						<React class="hidden md:inline size-4 md:w-6 h-6 grayscale brightness-200" />
-						React
-					</SocialPill>
-					
-					<SocialPill>
-						<JavaScript class="hidden md:inline size-4 md:w-6 h-6" />
-						JavaScript
-					</SocialPill>
-					
-					<SocialPill>
-						<TypeScript class="hidden md:inline size-3 md:w-4 h-4" />
-						TypeScript
-					</SocialPill>
-					
-					<SocialPill>
-						<Tailwind class="hidden md:inline size-3 md:w-4 h-4 grayscale brightness-200" />
-						Tailwind
-					</SocialPill>
-					
-					<SocialPill>
-						<Java class="hidden md:inline size-4 md:w-6 h-6" />
-						Java  
-					</SocialPill>
-					
-					<SocialPill>
-						<SpringBootIcon class=" hidden md:inline size-3 md:w-4 h-4" />
-						SpringBoot
-					</SocialPill>
-					
-					<SocialPill>
-						<Mysql class="hidden md:inline size-4 md:w-6 h-6" />
-						MySQL
-					</SocialPill>
+				<h3 class="text-2xl font-semibold text-pretty mb-4 text-white ml-2 mt-28">Mis Habilidades</h3>
+				
+				<div class="flex flex-col gap-3 mt-6 text-sm">
+					<div class="grid grid-cols-4 md:flex gap-2">
+						<SocialPill>
+							<React class="hidden md:inline size-4 md:w-6 h-6 grayscale brightness-200" />
+							React
+						</SocialPill>
+						<SocialPill>
+							<JavaScript class="hidden md:inline size-4 md:w-6 h-6" />
+							JavaScript
+						</SocialPill>
+						<SocialPill>
+							<TypeScript class="hidden md:inline size-3 md:w-4 h-4" />
+							TypeScript
+						</SocialPill>
+						<SocialPill>
+							<Tailwind class="hidden md:inline size-3 md:w-4 h-4 grayscale brightness-200" />
+							Tailwind
+						</SocialPill>
+					</div>
+
+					<div class="grid grid-cols-4 md:flex gap-2">
+						<SocialPill>
+							<Java class="hidden md:inline size-4 md:w-6 h-6" />
+							Java
+						</SocialPill>
+						<SocialPill>
+							<SpringBootIcon class="hidden md:inline size-3 md:w-4 h-4" />
+							SpringBoot
+						</SocialPill>
+						<SocialPill>
+							<Mysql class="hidden md:inline size-4 md:w-6 h-6" />
+							MySQL
+						</SocialPill>
+						<SocialPill>
+							<Python class="hidden md:inline size-4 md:w-6 h-6 brightness-0 invert" />
+							Python
+						</SocialPill>
+					</div>
 				</div>
 			</div>
 			

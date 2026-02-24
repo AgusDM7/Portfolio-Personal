@@ -6,34 +6,65 @@ import LinkButton from "./LinkButton.astro";
 import React from "./icons/React.astro";
 import Java from "./icons/Java.astro";
 import IconAstro from "./icons/astroIcon.astro"
+import Python from "./icons/Python.astro";
 
 
 const TAGS = {
   REACT: {
     name: "React.js",
-    class: "bg-gradient-to-r from-[#0000]/80 to-gray-900/80 text-white",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
     icon: React,
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    class: "bg-gradient-to-r from-[#003159]/80 to-gray-800/80 text-white",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
     icon: Tailwind,
   },
-
   JAVA: {
     name: "Java",
-    class: "bg-gradient-to-r from-[#5382a1]/80 to-gray-800/80 text-white",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
     icon: Java,
   },
-
   ASTRO: {
     name: "Astro",
-    class: "bg-gradient-to-r from-[#5382a1]/80 to-gray-800/80 text-white",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
     icon: IconAstro,
   },
-
+  PYTHON: {
+    name: "Python",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
+    icon: Python,
+  },
 };
+
+
+
+
 const PROJECTS = [
+
+
+  {
+    title: "Local AI RAG Agent",
+    description:
+      "Agente de inteligencia artificial local con capacidades de Retrieval-Augmented Generation (RAG) para analizar documentos PDF. Desarrollado con Python - Langchain - Ollama - Chromadb. ",
+   
+    github: "https://github.com/AgusDM7/Local-Ai-RAG.git",
+    image: "/Projects/LocalAi.png",
+    tags: [TAGS.PYTHON],
+  },
+
+
+  {
+    title: "El Buen Sabor",
+    description:
+      "Plataforma web de pedidos de comida con módulo de clientes — autenticación, catálogo, carrito y pagos online — y panel administrativo en tiempo real con WebSockets para gestión de cocina, productos, pedidos y delivery.",
+    
+    github: "https://github.com/LucasUdrea-dev/ElBuenSabor-frontend-PF25.git",
+    image: "/Projects/buensabor.png",
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.JAVA],
+  },
+
+  
   {
     title: "Reproductor Web Spotify",
     description:
@@ -42,25 +73,6 @@ const PROJECTS = [
     github: "https://github.com/AgusDM7/Spotify-Clone.git",
     image: "/Projects/spotifyclone.png",
     tags: [TAGS.ASTRO,TAGS.REACT, TAGS.TAILWIND],
-  },
-
-  {
-    title: "El Buen Sabor",
-    description:
-      "El Buen Sabor es una aplicación web de pedidos de comida online. Módulo de clientes: login firebase, pagos online, catalogo, carrito, historial de pedidos. Panel administrativo: gestión de productos con web socket, apartado de cocina, pedidos, gestion de productos, delivery, etc.",
-    
-    github: "https://github.com/LucasUdrea-dev/ElBuenSabor-frontend-PF25.git",
-    image: "/Projects/buensabor.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.JAVA],
-  },
-  {
-    title: "Instrumentos Hendrix",
-    description:
-      "Hendrix una tienda online de instrumentos musicales que cuenta con dos módulos principales: un área de compra con catálogo y carrito; y un panel administrativo que permite realizar operaciones CRUD sobre el inventario ",
-   
-    github: "https://github.com/LucasUdrea-dev/TPFinalLab4.git",
-    image: "/Projects/hendrix.png",
-    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.JAVA],
   },
 ];
 ---
