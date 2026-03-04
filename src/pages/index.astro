@@ -30,16 +30,16 @@ import Python from "../components/icons/Python.astro";
 	description="Bienvenido/a al portfolio de Agustín, programador Full Stack con experiencia en desarrollo web, bases de datos y diseño de interfaces. Descubrí mis proyectos, formación y datos de contacto."
 >
 	<main class="px-5">
-		<SectionContainer class="pt-6 sm:pt-16 md:pt-24 pb-36 sm:pb-40 md:pb-30">
+		<SectionContainer class="relative pt-6 sm:pt-16 md:pt-24 pb-16 sm:pb-40 md:pb-30">
 			
 			<h1
-				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-x-4 pb-6 lg:pb-10 opacity-0 animate-slide-down"
+				class="relative text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row flex-wrap gap-x-2 pb-6 lg:pb-10 opacity-0 animate-slide-down"
 			>
 				Hey, soy <span class="text-gradient animate-gradient inline-block pb-1">Agustín</span> <a
 					href="https://www.linkedin.com/in/agustín-del-monte-741776244/"
 					target="_blank"
 					rel="noopener"
-					class="flex justify-center items-center"
+					class="absolute top-1 right-0 md:static md:flex md:items-center"
 				>
 					<Badge> Disponible </Badge>
 				</a>
@@ -83,7 +83,7 @@ import Python from "../components/icons/Python.astro";
 			<AboutMe />
 
 				<div class="mt-16">
-				<h3 class="text-2xl font-semibold text-pretty mb-4 text-white ml-2 mt-28">Mis Habilidades</h3>
+				<h3 class="text-2xl font-semibold text-pretty mb-4 text-white ml-2 mt-20">Mis Habilidades</h3>
 				
 				<div class="flex flex-col gap-3 mt-6 text-sm">
 					<div class="grid grid-cols-4 md:flex gap-2">
