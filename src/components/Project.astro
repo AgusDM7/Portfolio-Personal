@@ -7,6 +7,8 @@ import React from "./icons/React.astro";
 import Java from "./icons/Java.astro";
 import IconAstro from "./icons/astroIcon.astro"
 import Python from "./icons/Python.astro";
+import Langchain from "./icons/Langchain.astro";
+import Langgraph from "./icons/Langgraph.astro";
 
 
 const TAGS = {
@@ -35,12 +37,37 @@ const TAGS = {
     class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
     icon: Python,
   },
+
+  LANGCHAIN: {
+    name: "Langchain",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
+    icon: Langchain,
+  },
+
+  LANGGRAPH: {
+    name: "Langgraph",
+    class: "bg-white/10 backdrop-blur-sm border border-white/20 text-white/90 shadow-sm hover:bg-white/15 hover:border-white/30 transition-all duration-300",
+    icon: Langgraph,
+  },
+
 };
 
 
 
 
 const PROJECTS = [
+
+
+{
+    title: "Research Agent web — Investigación y Desarrollo en Programación",
+    description:
+      "Un asistente de IA web para investigación y aprendizaje de programación — construido con LangGraph, FastAPI y GPT-4o-mini. Hacé una pregunta y el agente decide que herramientas usar en Wikipedia, GitHub o Stack Overflow. ",
+    
+    link: "https://agente-ai-web.vercel.app/",
+    github: "https://github.com/AgusDM7/Agente-Ai-Web.git",
+    image: "/Projects/WebAi.png",
+    tags: [TAGS.PYTHON, TAGS.LANGCHAIN, TAGS.LANGGRAPH],
+  },
 
 
   {
@@ -50,7 +77,7 @@ const PROJECTS = [
    
     github: "https://github.com/AgusDM7/Local-Ai-RAG.git",
     image: "/Projects/LocalAi.png",
-    tags: [TAGS.PYTHON],
+    tags: [TAGS.PYTHON, TAGS.LANGCHAIN],
   },
 
 
@@ -101,7 +128,7 @@ const PROJECTS = [
                   <span
                     class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
                   >
-                    <tag.icon class="size-4" />
+                    <tag.icon class="size-5" />
                     {tag.name}
                   </span>
                 </li>
